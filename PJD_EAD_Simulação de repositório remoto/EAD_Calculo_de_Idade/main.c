@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Declarem suas fun�oes abaixo
+//Declarem suas funçoes abaixo
 
 void idosa ( int anoAtual , int anoNascimento);
 
@@ -20,15 +20,14 @@ int main()
     scanf("%d",&anoAtual);
 
 
-   idosa (anoAtual ,anoNascimento);
-
+    idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
 
 
     return 0;
 }
 
-
+//Funçao WILL
 void idosa ( int anoAtual , int anoNascimento) {
 
     int idade;
@@ -42,7 +41,7 @@ void idosa ( int anoAtual , int anoNascimento) {
 
 
 
-
+//Funçao GABRIEL
 void calculo(int valor1, int valor2)
 {
     int idade;
