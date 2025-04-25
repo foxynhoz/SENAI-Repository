@@ -3,6 +3,8 @@
 
 //Declarem suas funçoes abaixo
 
+void soma(int anoAtual, int anoNacimento);
+
 void idosa ( int anoAtual , int anoNascimento);
 
 void calculo(int valor1, int valor2);
@@ -22,6 +24,7 @@ int main()
 
     idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
+    soma(anoAtual,anoNascimento);
 
 
     return 0;
@@ -54,4 +57,21 @@ void calculo(int valor1, int valor2)
 
 
 }
+// bruno
+void soma(int anoAtual, int anoNacimento);
 
+
+void soma(int anoAtual, int anoNacimento)
+{
+    int resultado;
+
+    resultado = anoAtual - anoNacimento;
+
+
+    if (resultado = 4 && 10)
+    {
+        printf("a pessoa e uma crianca");
+
+    }
+
+}
