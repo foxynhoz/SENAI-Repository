@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1745616504 source:c:\users\gabriel\onedrive\Área de trabalho\curso senai\trabalho ead visionamento\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
+	<stdio.h>
+	<stdlib.h>
+
