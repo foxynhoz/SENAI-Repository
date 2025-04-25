@@ -3,5 +3,5 @@
 - Christopher
 - Will ✓
 - Lorrans
-- Bruno
+- Bruno ✓
 - Gabriel S ✓
