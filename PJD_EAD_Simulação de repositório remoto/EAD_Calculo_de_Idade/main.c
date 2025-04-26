@@ -3,6 +3,8 @@
 
 //Declarem suas funçoes abaixo
 
+void bebe( int a, int b);
+
 void soma(int anoAtual, int anoNacimento);
 
 void idosa ( int anoAtual , int anoNascimento);
@@ -24,12 +26,23 @@ int main()
     scanf("%d",&anoAtual);
 
 
+    bebe(anoAtual ,anoNascimento);
+    calculo(anoNascimento,anoAtual);
     idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
     soma(anoAtual,anoNascimento);
     adulto(anoAtual,anoNascimento);
 
     return 0;
+}
+//Funcao Lorrans
+
+void bebe(int a, int b){
+ a=a-b;
+ if(a>=0 && a<=3){
+ printf("Voce e um bebe. Sua idade e: %d", a);
+ }
+
 }
 
 //Funçao WILL
