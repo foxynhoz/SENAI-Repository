@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Declarem suas fun�oes abaixo
+//Declarem suas funçoes abaixo
+
+void soma(int anoAtual, int anoNacimento);
 
 void idosa ( int anoAtual , int anoNascimento);
 
 void calculo(int valor1, int valor2);
+
+void adulto(int a, int b);
 
 
 int main()
@@ -20,15 +24,15 @@ int main()
     scanf("%d",&anoAtual);
 
 
-   idosa (anoAtual ,anoNascimento);
-
+    idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
-
+    soma(anoAtual,anoNascimento);
+    adulto(anoAtual,anoNascimento);
 
     return 0;
 }
 
-
+//Funçao WILL
 void idosa ( int anoAtual , int anoNascimento) {
 
     int idade;
@@ -42,7 +46,7 @@ void idosa ( int anoAtual , int anoNascimento) {
 
 
 
-
+//Funçao GABRIEL
 void calculo(int valor1, int valor2)
 {
     int idade;
@@ -55,4 +59,28 @@ void calculo(int valor1, int valor2)
 
 
 }
+//Funcao bruno
+void soma(int anoAtual, int anoNacimento)
+{
+    int resultado;
 
+    resultado = anoAtual - anoNacimento;
+
+
+    if (resultado = 4 && 10)
+    {
+        printf("a pessoa e uma crianca");
+
+    }
+
+}
+
+//Funcao Chris
+
+void adulto(int a, int b){
+ a=a-b;
+ if(a>=19 && a<50){
+ printf("Voce e um adulto. Sua idade e: %d", a);
+ }
+
+}
