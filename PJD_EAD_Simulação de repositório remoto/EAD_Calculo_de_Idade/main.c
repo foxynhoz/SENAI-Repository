@@ -9,6 +9,8 @@ void idosa ( int anoAtual , int anoNascimento);
 
 void calculo(int valor1, int valor2);
 
+void adulto(int a, int b);
+
 
 int main()
 {
@@ -25,7 +27,7 @@ int main()
     idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
     soma(anoAtual,anoNascimento);
-
+    adulto(anoAtual,anoNascimento);
 
     return 0;
 }
@@ -57,10 +59,7 @@ void calculo(int valor1, int valor2)
 
 
 }
-// bruno
-void soma(int anoAtual, int anoNacimento);
-
-
+//Funcao bruno
 void soma(int anoAtual, int anoNacimento)
 {
     int resultado;
@@ -73,5 +72,15 @@ void soma(int anoAtual, int anoNacimento)
         printf("a pessoa e uma crianca");
 
     }
+
+}
+
+//Funcao Chris
+
+void adulto(int a, int b){
+ a=a-b;
+ if(a>=19 && a<50){
+ printf("Voce e um adulto. Sua idade e: %d", a);
+ }
 
 }
