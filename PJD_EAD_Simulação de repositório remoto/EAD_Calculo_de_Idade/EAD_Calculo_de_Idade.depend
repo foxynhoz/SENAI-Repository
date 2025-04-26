@@ -1,26 +1,25 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
-140717085514657 <<<<<<< HEAD
-
-1745617568 source:c:\users\willd\desktop\nova pasta (2)\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
-=======
 0 <<<<<<< HEAD
 
 1745631175 source:c:\users\willd\desktop\nova pasta (2)\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
 	<stdio.h>
 	<stdlib.h>
->>>>>>> cb28689b33c83510e45e60b2393625a3e4844fd5
+
+1745631066 8689b33c83510e45e60b2393625a3e4844fd5
+	<stdio.h>
+	<stdlib.h>
 
 1745616504 source:c:\users\gabriel\onedrive\Área de trabalho\curso senai\trabalho ead visionamento\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
 
 1745616504 20e94575d675cd951da1a04e089700bc2cd55
-<<<<<<< HEAD
+
+1745616504 D
 	<stdio.h>
 	<stdlib.h>
 
 1745631066 source:c:\users\bruno\onedrive\documentos\hub\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
-=======
->>>>>>> cb28689b33c83510e45e60b2393625a3e4844fd5
+
+1745693568 source:c:\users\lorra\onedrive\documentos\lorrans\pjd_ead_simulação de repositório remoto\ead_calculo_de_idade\main.c
 	<stdio.h>
 	<stdlib.h>
 
