@@ -1,7 +1,7 @@
 # Alunos do Grupo 1 - Atividade Simulaçao de Repositorio Remoto
-- Daniel
-- Christopher
+- Daniel ✓
+- Christopher ✓
 - Will ✓
 - Lorrans
-- Bruno
+- Bruno ✓
 - Gabriel S ✓
