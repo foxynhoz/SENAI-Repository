@@ -36,7 +36,7 @@ void idosa ( int anoAtual , int anoNascimento) {
 
     if (idade > 51)
 
-    printf ("Voce eh idoso");
+    printf ("Sua idade eh %d. Categoria idoso." , idade);
 
 }
 
