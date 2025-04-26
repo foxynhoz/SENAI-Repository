@@ -2,6 +2,6 @@
 - Daniel ✓
 - Christopher ✓
 - Will ✓
-- Lorrans
+- Lorrans ✓
 - Bruno ✓
 - Gabriel S ✓
