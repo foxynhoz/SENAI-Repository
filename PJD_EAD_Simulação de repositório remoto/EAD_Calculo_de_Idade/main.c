@@ -68,9 +68,9 @@ void soma(int anoAtual, int anoNacimento)
     resultado = anoAtual - anoNacimento;
 
 
-    if (resultado = 4 && 10)
+    if (resultado >= 4 && resultado <= 10)
     {
-        printf("a pessoa e uma crianca");
+        printf("sua idade e %d voce e uma crianca",resultado);
 
     }
 
