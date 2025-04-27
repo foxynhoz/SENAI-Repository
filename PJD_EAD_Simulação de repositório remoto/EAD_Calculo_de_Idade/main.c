@@ -3,6 +3,8 @@
 
 //Declarem suas funçoes abaixo
 
+void naoExistente(int a, int b);
+
 void bebe( int a, int b);
 
 void soma(int anoAtual, int anoNacimento);
@@ -25,9 +27,8 @@ int main()
     printf("Digite o ano de atual: ");
     scanf("%d",&anoAtual);
 
-
+    naoExistente(anoAtual ,anoNascimento);
     bebe(anoAtual ,anoNascimento);
-    calculo(anoNascimento,anoAtual);
     idosa (anoAtual ,anoNascimento);
     calculo(anoNascimento,anoAtual);
     soma(anoAtual,anoNascimento);
@@ -35,6 +36,15 @@ int main()
 
     return 0;
 }
+//Função Daniels (pra falar que eu fiz uma função fora do main)
+void naoExistente(int a,int b){
+    a = a - b
+    if (a < 0){
+    printf("Ou voce nao existe, ou voce eh um viajante no tempo\nSua idade deu %d", a);
+    }
+}
+
+
 //Funcao Lorrans
 
 void bebe(int a, int b){
