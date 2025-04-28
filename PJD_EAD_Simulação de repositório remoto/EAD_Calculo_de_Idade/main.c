@@ -38,7 +38,7 @@ int main()
 }
 //Função Daniels (pra falar que eu fiz uma função fora do main)
 void naoExistente(int a,int b){
-    a = a - b
+    a = a - b;
     if (a < 0){
     printf("Ou voce nao existe, ou voce eh um viajante no tempo\nSua idade deu %d", a);
     }
