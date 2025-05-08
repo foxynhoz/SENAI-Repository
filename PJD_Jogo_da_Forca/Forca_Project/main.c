@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <windows.h>
 
+
 int main()
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -38,6 +39,7 @@ int main()
         {
             tentativas--;
         }
+
         if(tentativas == 0)
         {
             SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
@@ -47,3 +49,4 @@ int main()
     }
     return 0;
 }
+
