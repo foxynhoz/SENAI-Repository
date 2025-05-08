@@ -18,9 +18,10 @@ int main()
     while(1)
     {
         gotOne = false;
-        printf("%s \n", resposta);
-        printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
+
+        printf("\n\nz033Digite um letra Tentativas: %d:\n",tentativas);
         scanf(" %c", &usrPalpite);
+        printf("%s \n", resposta);
         for(int i = 0; i < strlen(palavra); i++)
         {
             if(usrPalpite == palavra[i])

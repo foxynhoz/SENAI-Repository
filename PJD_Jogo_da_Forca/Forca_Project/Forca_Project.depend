@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1746679654 source:c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\main.c
+1746680501 source:c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<stdbool.h>
 
