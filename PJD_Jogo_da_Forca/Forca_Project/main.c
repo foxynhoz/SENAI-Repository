@@ -4,35 +4,27 @@
 
 int main()
 {
-    char palavra[] = "amongus";
+    char palavra[] = "daniel";
     char resposta[strlen(palavra)];
     char usrPalpite;
 
-    for(int i = 0; i < strlen(palavra); i++)
+     for(int i = 0; i < strlen(palavra); i++)
     {
         resposta[i] = '_';
     }
-
-
-while(1)
+    while(1)
     {
-        printf("%s %c ", palavra, palavra[0]);
-        printf("Digite um letra: ");
-        scanf("%c", &usrPalpite);
-        printf("\n");
-
-        for(int i = 0; i < strlen(palavra); i++){
-            printf("%c", resposta[i]);
-            if(usrPalpite == palavra[i]){
-                printf("%c ", palavra[i]);
-                resposta[i] = usrPalpite;
-            }
-            else{
-                printf("_ ");
+        printf("%s \n", resposta);
+        printf("\n\nDigite um letra:\n");
+        scanf(" %c", &usrPalpite);
+        for(int i = 0; i < strlen(palavra); i++)
+        {
+            if(usrPalpite == palavra[i])
+            {
+                resposta[i]=palavra[i];
             }
 
         }
-        getchar();
-        printf("\n");
     }
+return 0;
 }
