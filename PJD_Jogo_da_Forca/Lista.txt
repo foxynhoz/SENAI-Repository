@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <windows.h>
+int main()
+{
+    char faceis[] = "batata";
+    char faceis1[] = "doce";
+    char faceis2[] = "gato";
+    char faceis3[] = "pipoca";
+    char faceis4[] = "bonita";
+
+    char medias[] = "manfatas";
+    char medias1[] = "calabouso";
+    char medias2[] = "mandraque";
+    char medias3[] = "repousar";
+    char medias4[] = "undertale";
+
+    char dificeis[] = "ginecofobia";
+    char dificeis1[] = "escolionofobia";
+    char dificeis2[] = "hipopotomonstrosesquipedaliofobia";
+    char dificeis3[] = "pneumoultramicroscopicossilicovulcanoconiotico";
+    char dificeis4[] = "oftalmotorrinolaringologista";
+
+    return 0;
+}
