@@ -6,9 +6,10 @@
 
 int main()
 {
+
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     bool gotOne;
-    char palavra[] = "daniel";
+    char palavra[] = "palavra";
     char resposta[strlen(palavra)];
     char usrPalpite;
     int tentativas = 6;
@@ -23,6 +24,7 @@ int main()
         printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
         printf("%s \n", resposta);
         scanf(" %c", &usrPalpite);
+        usrPalpite = tolower(usrPalpite);
 
         for(int i = 0; i < strlen(palavra); i++)
         {
@@ -32,16 +34,18 @@ int main()
                 resposta[i] = palavra[i];
             }
         }
-        if(gotOne == false){
-            tentativas--;
 
+        if(gotOne == false)
+        {
+            tentativas--;
         }
         if(tentativas == 0)
-            {
+        {
             SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
             printf("\n\n\nGAME OVER.\n\n\n");
-                break;
-            }
+            break;
+        }
     }
-return 0;
+    return 0;
 }
+
