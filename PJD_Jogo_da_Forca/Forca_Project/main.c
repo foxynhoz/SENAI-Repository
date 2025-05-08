@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <windows.h>
 
 int main()
 {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     bool gotOne;
     char palavra[] = "daniel";
     char resposta[strlen(palavra)];
@@ -18,10 +20,10 @@ int main()
     while(1)
     {
         gotOne = false;
-
-        printf("\n\nz033Digite um letra Tentativas: %d:\n",tentativas);
-        scanf(" %c", &usrPalpite);
+        printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
         printf("%s \n", resposta);
+        scanf(" %c", &usrPalpite);
+
         for(int i = 0; i < strlen(palavra); i++)
         {
             if(usrPalpite == palavra[i])
@@ -32,7 +34,14 @@ int main()
         }
         if(gotOne == false){
             tentativas--;
+
         }
+        if(tentativas == 0)
+            {
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
+            printf("\n\n\nGAME OVER.\n\n\n");
+                break;
+            }
     }
 return 0;
 }
