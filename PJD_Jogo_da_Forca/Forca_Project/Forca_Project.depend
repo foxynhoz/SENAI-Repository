@@ -13,7 +13,11 @@
 	<stdbool.h>
 	<windows.h>
 
+<<<<<<< HEAD
 1746742488 source:c:\users\gabriel\onedrive\Área de trabalho\curso senai\trabalho ead visionamento\pjd_jogo_da_forca\forca_project\main.c
+=======
+1746743862 source:c:\users\lorrans\desktop\nova pasta\senai-repository\pjd_jogo_da_forca\forca_project\main.c
+>>>>>>> b68efa348d3bb851af3efaf24a728d9f0fcf6f95
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
