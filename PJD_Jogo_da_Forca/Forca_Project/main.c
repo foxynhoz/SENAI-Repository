@@ -6,7 +6,6 @@
 
 int main()
 {
-
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     bool gotOne;
     char palavra[] = "palavra";
@@ -48,4 +47,3 @@ int main()
     }
     return 0;
 }
-
