@@ -4,11 +4,14 @@
 #include <stdbool.h>
 #include <windows.h>
 
+void abobora();
+
+
 int main()
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     bool gotOne;
-    char palavra[] = "daniel";
+    char palavra[]="abacate";
     char resposta[strlen(palavra)];
     char usrPalpite;
     int tentativas = 6;
@@ -21,8 +24,9 @@ int main()
     {
         gotOne = false;
         printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
-        printf("%s \n", resposta);
+        printf("%s\n", resposta);
         scanf(" %c", &usrPalpite);
+        usrPalpite = tolower(usrPalpite);
 
         for(int i = 0; i < strlen(palavra); i++)
         {
