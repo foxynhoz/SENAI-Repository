@@ -1,5 +1,21 @@
 #include <conio.h>
 #include <windows.h>
+char total[50];
+char faceis[50] = "batata-";
+char faceis1[50] = "doce-";
+char faceis2[50] = "gato-";
+char faceis3[50] = "pipoca-";
+char faceis4[50] = "bonita-";
+char medias[50] = "manfatas-";
+char medias1[50] = "calabouco-";
+char medias2[50] = "mandraque-";
+char medias3[50] = "repousar-";
+char medias4[50] = "undertale-";
+char dificeis[50] = "ginecofobia-";
+char dificeis1[50] = "escolionofobia-";
+char dificeis2[50] = "hipopotomonstrosesquipedaliofobia-";
+char dificeis3[50] = "pneumoultramicroscopicossilicovulcanoconiotico-";
+char dificeis4[50] = "oftalmotorrinolaringologista-";
 //Funçoes BASE
 //VITORIA
 void VictoryText()
@@ -233,5 +249,235 @@ void menu()
             }
         }
 
+    }
+}
+
+
+void nivel (int usuario)
+{
+    srand(time(NULL));
+    int randomizar=rand()%4;
+    int i =0;
+
+    if(usuario == 1)
+    {
+        if (randomizar == 0)
+        {
+            for (i = 0; i < 50 ; i++)
+            {
+                if (faceis[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = faceis[i];
+                }
+            }
+        }
+        if (randomizar == 1)
+        {
+            for (i = 0; i < 50 ; i++)
+            {
+                if (faceis1[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = faceis1[i];
+                }
+            }
+        }
+        if (randomizar == 2)
+        {
+            for (i = 0; i < 50 ; i++)
+            {
+                if (faceis2[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = faceis2[i];
+                }
+            }
+        }
+        if (randomizar == 3)
+        {
+            for (i = 0; i < 50 ; i++)
+            {
+                if (faceis3[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = faceis3[i];
+                }
+            }
+        }
+        else
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (faceis4[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = faceis4[i];
+                }
+            }
+        }
+    }
+    else if (usuario == 2)
+    {
+        if (randomizar == 0)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (medias[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = medias[i];
+                }
+            }
+        }
+        if (randomizar == 1)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (medias1[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = medias1[i];
+                }
+            }
+        }
+        if (randomizar == 2)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (medias2[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = medias2[i];
+                }
+            }
+        }
+        if (randomizar == 3)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (medias3[i]= '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = medias3[i];
+                }
+            }
+        }
+        else
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (medias4[i]=='-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = medias4[i];
+                }
+            }
+        }
+    }
+
+    else if (usuario == 3)
+    {
+        if (randomizar == 0)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (dificeis[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = dificeis[i];
+                }
+            }
+        }
+        if (randomizar == 1)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (dificeis1[i]=='-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = dificeis1[i];
+                }
+            }
+        }
+        if (randomizar == 2)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (dificeis2[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = dificeis2[i];
+                }
+            }
+
+        }
+        if (randomizar == 3)
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (dificeis3[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = dificeis3[i];
+                }
+            }
+        }
+        else
+        {
+            for (i = 0; i < 50; i++)
+            {
+                if (dificeis4[i]== '-')
+                {
+                    break;
+                }
+                else
+                {
+                    total[i] = dificeis4[i];
+                }
+            }
+        }
     }
 }

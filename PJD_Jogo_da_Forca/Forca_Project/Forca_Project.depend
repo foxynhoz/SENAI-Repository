@@ -7,12 +7,13 @@
 	<windows.h>
 	"functions.h"
 
-1746681657 source:c:\users\criscobrão\desktop\codigos\senai-repository\pjd_jogo_da_forca\forca_project\main.c
+1746777924 source:c:\users\criscobrão\desktop\codigos\senai-repository\pjd_jogo_da_forca\forca_project\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<windows.h>
+	"functions.h"
 
 1746681657 D
 
@@ -33,6 +34,10 @@
 	<windows.h>
 
 1746777340 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\functions.h
+	<conio.h>
+	<windows.h>
+
+1746778027 c:\users\criscobrão\desktop\codigos\senai-repository\pjd_jogo_da_forca\forca_project\functions.h
 	<conio.h>
 	<windows.h>
 
