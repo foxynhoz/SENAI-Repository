@@ -28,7 +28,7 @@ int main()
         {
             gotOne = false;
             exibir_forca(tentativas);
-            printf("\n\nDigite um letra:\n",tentativas);
+            printf("\n\nDigite um letra:\n");
             printf("%s \n", resposta);
             scanf(" %c", &usrPalpite);
             usrPalpite = tolower(usrPalpite);

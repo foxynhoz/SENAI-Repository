@@ -8,7 +8,6 @@ void VictoryText()
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
     printf("Parabens! Voce venceu!\n");
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY );
-
 }
 //DERROTA
 void DefeatText()
