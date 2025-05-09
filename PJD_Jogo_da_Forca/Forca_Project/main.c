@@ -5,35 +5,37 @@
 #include <windows.h>
 #include "functions.h"
 
+void eraseWord(char toErase);
+
 int main()
 {
-    int vitoria = 0, derrota = 0;
-    while (1) //
+    menu();
+    while (1)
     {
+        int vitoria = 0, derrota = 0;
         bool gotOne;
         char palavra[] = "palavra";
         char resposta[strlen(palavra)];
         char usrPalpite;
         int tentativas = 6;
-        //
-
-        //
-
-
-        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
         for(int i = 0; i < strlen(palavra); i++)
         {
             resposta[i] = '_';
         }
+
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
         while(1)
         {
             gotOne = false;
-            printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
+            exibir_forca(tentativas);
+            printf("\n\nDigite um letra:\n",tentativas);
             printf("%s \n", resposta);
             scanf(" %c", &usrPalpite);
             usrPalpite = tolower(usrPalpite);
 
+            //Check se usuario acertou pelo menos uma
             for(int i = 0; i < strlen(palavra); i++)
             {
                 if(usrPalpite == palavra[i])
@@ -43,32 +45,32 @@ int main()
                 }
             }
 
+            system("cls");
+
+            //Se ele não acertar nenhuma
             if(gotOne == false)
             {
                 tentativas--;
             }
-            exibir_forca(tentativas);
+
             //Se for vitoria
             if(strcmp(resposta, palavra) == 0)
             {
-                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-                printf("\n\nParabens! Voce venceu!\n");
                 vitoria++;
+                VictoryText();
                 victor(vitoria, derrota);
-                break;
+                tentativas = 6;
+                continue;
             }
-            //Se for derrota
 
+            //Se for derrota
             if(tentativas == 0)
             {
-                SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
-                printf("\n\n\nGAME OVER.\n\n\n");
                 derrota++;
+                DefeatText();
                 victor(vitoria, derrota);
-                break;
+                continue;
             }
-            funcao(vitoria);
-
         }
     }
     getchar();
