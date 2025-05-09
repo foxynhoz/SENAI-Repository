@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <windows.h>
 
-
+void funcao(int jogador);
 void exibir_forca(int erros);
 
 
@@ -87,4 +87,28 @@ void exibir_forca(int erros) {
         printf("\n------\n|     |\n|     O\n|    /|\\\n|    / \\\n|   GAME OVER\n---\n");
         break;
 }
+}
+
+void funcao (int jogador){
+    if (jogador <=4)
+    {
+       printf ("Voce ganhou BRONZE");
+    }
+
+    else if (jogador <=5)
+    {
+        printf ("Voce ganhou PRATA");
+    }
+    else if (jogador <=10)
+
+    {
+        printf ("Voce ganhou OURO");
+    }
+
+    else if (jogador <=15)
+
+    {
+        printf ("Voce ganhou PLATINA");
+    }
+
 }
