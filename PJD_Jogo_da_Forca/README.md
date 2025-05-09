@@ -1,0 +1,11 @@
+# Alunos do Grupo 1 - Gestão do projeto 'Jogo da Forca'
+- Daniel 
+- Christopher 
+- Will 
+- Lorrans 
+- Bruno 
+- Gabriel S 
+- Gustavo 
+- Higor
+- Rodrigo
+- Davi
