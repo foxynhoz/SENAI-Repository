@@ -6,18 +6,23 @@
 
 void funcao(int jogador);
 void exibir_forca(int erros);
+void victor(int vito, int dero);
 
 
 int main()
 {
-
-
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    //
     bool gotOne;
     char palavra[] = "palavra";
     char resposta[strlen(palavra)];
     char usrPalpite;
     int tentativas = 6;
+    //
+    int vitoria = 0, derrota = 0;
+    //
+
+
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
      for(int i = 0; i < strlen(palavra); i++)
     {
@@ -44,20 +49,30 @@ int main()
         {
             tentativas--;
         }
-
         exibir_forca(tentativas);
+        //Se for vitoria
 
+        //Se for derrota
         if(tentativas == 0)
         {
             SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
             printf("\n\n\nGAME OVER.\n\n\n");
+            derrota++;
+            victor(vitoria, derrota);
             break;
         }
     }
     return 0;
 }
 
-
+void victor(int vito, int dero){
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN );
+    printf("Vitorias: %d    ", vito);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
+    printf("Derrotas: %d", dero);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY );
+}
 
 void exibir_forca(int erros) {
 
@@ -112,3 +127,4 @@ void funcao (int jogador){
     }
 
 }
+
