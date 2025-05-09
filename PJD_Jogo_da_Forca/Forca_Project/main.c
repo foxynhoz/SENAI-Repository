@@ -3,16 +3,17 @@
 #include <string.h>
 #include <stdbool.h>
 #include <windows.h>
+#include <time.h>
 #include "functions.h"
 
 int main()
 {
     int vitoria = 0, derrota = 0;
+    int i = 0;
     while (1) //
     {
         bool gotOne;
-        char palavra[] = "palavra";
-        char resposta[strlen(palavra)];
+        char resposta[i];
         char usrPalpite;
         int tentativas = 6;
         //
@@ -22,7 +23,7 @@ int main()
 
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-        for(int i = 0; i < strlen(palavra); i++)
+        for(int i = 0; i < 50; i++)
         {
             resposta[i] = '_';
         }
@@ -34,12 +35,12 @@ int main()
             scanf(" %c", &usrPalpite);
             usrPalpite = tolower(usrPalpite);
 
-            for(int i = 0; i < strlen(palavra); i++)
+            for(int i = 0; i < 50; i++)
             {
-                if(usrPalpite == palavra[i])
+                if(usrPalpite == total[i])
                 {
                     gotOne = true;
-                    resposta[i] = palavra[i];
+                    resposta[i] = total[i];
                 }
             }
 
@@ -49,7 +50,7 @@ int main()
             }
             exibir_forca(tentativas);
             //Se for vitoria
-            if(strcmp(resposta, palavra) == 0)
+            if(strcmp(resposta, total) == 0)
             {
                 SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
                 printf("\n\nParabens! Voce venceu!\n");
