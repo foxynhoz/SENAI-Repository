@@ -11,69 +11,77 @@ void victor(int vito, int dero);
 
 int main()
 {
-    //
-    bool gotOne;
-    char palavra[] = "palavra";
-    char resposta[strlen(palavra)];
-    char usrPalpite;
-    int tentativas = 6;
-    //
     int vitoria = 0, derrota = 0;
-    //
-
-
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-     for(int i = 0; i < strlen(palavra); i++)
+    while (1) //
     {
-        resposta[i] = '_';
-    }
-    while(1)
-    {
-        gotOne = false;
-        printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
-        printf("%s \n", resposta);
-        scanf(" %c", &usrPalpite);
-        usrPalpite = tolower(usrPalpite);
+        bool gotOne;
+        char palavra[] = "palavra";
+        char resposta[strlen(palavra)];
+        char usrPalpite;
+        int tentativas = 6;
+        //
+
+        //
+
+
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
         for(int i = 0; i < strlen(palavra); i++)
         {
-            if(usrPalpite == palavra[i])
+            resposta[i] = '_';
+        }
+        while(1)
+        {
+            gotOne = false;
+            printf("\n\nDigite um letra Tentativas: %d:\n",tentativas);
+            printf("%s \n", resposta);
+            scanf(" %c", &usrPalpite);
+            usrPalpite = tolower(usrPalpite);
+
+            for(int i = 0; i < strlen(palavra); i++)
             {
-                gotOne = true;
-                resposta[i] = palavra[i];
+                if(usrPalpite == palavra[i])
+                {
+                    gotOne = true;
+                    resposta[i] = palavra[i];
+                }
             }
-        }
 
-        if(gotOne == false)
-        {
-            tentativas--;
-                    }
-        exibir_forca(tentativas);
-        //Se for vitoria
-        if(strcmp(resposta, palavra) == 0)
-        {
-            SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-            printf("\n\nParabens! Voce venceu!\n");
-            vitoria++;
-            victor(vitoria, derrota);
-            break;
-        }
-        //Se for derrota
+            if(gotOne == false)
+            {
+                tentativas--;
+            }
+            exibir_forca(tentativas);
+            //Se for vitoria
+            if(strcmp(resposta, palavra) == 0)
+            {
+                SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+                printf("\n\nParabens! Voce venceu!\n");
+                vitoria++;
+                victor(vitoria, derrota);
+                break;
+            }
+            //Se for derrota
 
-        if(tentativas == 0)
-        {
-            SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
-            printf("\n\n\nGAME OVER.\n\n\n");
-            derrota++;
-            victor(vitoria, derrota);
-            break;
+            if(tentativas == 0)
+            {
+                SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
+                printf("\n\n\nGAME OVER.\n\n\n");
+                derrota++;
+                victor(vitoria, derrota);
+                break;
+            }
+            funcao(vitoria);
+
         }
     }
+    getchar();
     return 0;
+
 }
 
-void victor(int vito, int dero){
+void victor(int vito, int dero)
+{
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN );
     printf("Vitorias: %d    ", vito);
@@ -82,9 +90,11 @@ void victor(int vito, int dero){
     SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY );
 }
 
-void exibir_forca(int erros) {
+void exibir_forca(int erros)
+{
 
-    switch (erros) {
+    switch (erros)
+    {
     case 6:
         printf("\n------\n|\n|\n|\n|\n---\n");
         break;
@@ -109,26 +119,27 @@ void exibir_forca(int erros) {
     default:
         printf("\n------\n|     |\n|     O\n|    /|\\\n|    / \\\n|   GAME OVER\n---\n");
         break;
-}
+    }
 }
 
-void funcao (int jogador){
-    if (jogador <=4)
+void funcao (int jogador)
+{
+    if (jogador >= 5 && jogador <10)
     {
-       printf ("Voce ganhou BRONZE");
+        printf ("Voce ganhou BRONZE");
     }
 
-    else if (jogador <=5)
+    else if (jogador >= 10 && jogador <15)
     {
         printf ("Voce ganhou PRATA");
     }
-    else if (jogador <=10)
+    else if (jogador >= 15 && jogador <20)
 
     {
         printf ("Voce ganhou OURO");
     }
 
-    else if (jogador <=15)
+    else if (jogador >= 20)
 
     {
         printf ("Voce ganhou PLATINA");
