@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <windows.h>
+#include <time.h>
 #include "functions.h"
 
 int main()
@@ -10,9 +11,11 @@ int main()
     menu();
     while (1)
     {
+        srand(time(NULL));
         int vitoria = 0, derrota = 0;
         bool gotOne;
-        char palavra[] = "palavra";
+        const char* facil[] = {"agua","peixes","vida","bola","lima"};
+        const char* palavra; strcpy(palavra,facil[rand()%5]);
         char resposta[strlen(palavra)];
         char usrPalpite;
         int tentativas = 6;
@@ -22,13 +25,15 @@ int main()
             resposta[i] = '_';
         }
 
+        resposta[strlen(palavra)] = '\0';
+
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
         while(1)
         {
             gotOne = false;
             exibir_forca(tentativas);
-            printf("\n\nDigite um letra:\n");
+            printf("\n\nDigite um letra%d:\n",strcmp(resposta, palavra));
             printf("%s \n", resposta);
             scanf(" %c", &usrPalpite);
             usrPalpite = tolower(usrPalpite);
@@ -52,7 +57,7 @@ int main()
             }
 
             //Se for vitoria
-            if(strcmp(resposta, palavra) == 0)
+            if(strcmp(resposta, palavra) >= 0)
             {
                 vitoria++;
                 VictoryText();
