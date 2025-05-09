@@ -8,28 +8,16 @@
 
 int main()
 {
+    int vitoria = 0, derrota = 0;
     menu();
+
     while (1)
     {
         srand(time(NULL));
-        int vitoria = 0, derrota = 0;
         bool gotOne;
 
         //Listas de palavras
         const char* facil[] = {"agua","peixes","vida","bola","lima"};
-
-        //palavra recebe a copia do que esta em um indice aleatorio em facil
-        /*Aqui que um If else deve entrar, junto com um scanf e uma variavel de escolha de dificuldade
-            EX:
-            if dificuldade = 1
-                const char* palavra; strcpy(palavra,facil[rand()%5])
-            if dificuldade = 2
-                const char* palavra; strcpy(palavra,medio[rand()%5])
-            if dificuldade = 3
-                const char* palavra; strcpy(palavra,dificil[rand()%5])
-
-                use uma variavel int entre 1 e 3 pra que eu possa integrar no menu depois
-        */
         const char* palavra; strcpy(palavra,facil[rand()%5]);
 
         //Resposta terá como quantidade de indices, a mesma quantidade de letras da palavra armazenada em palavra
@@ -41,12 +29,12 @@ int main()
         {
             resposta[i] = '_';
         }
-
         //isso determina que o ultimo index receberá \0 como caractere para simbolizar o fim da string
         resposta[strlen(palavra)] = '\0';
 
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+        //Loop de jogo
         while(1)
         {
             gotOne = false;
