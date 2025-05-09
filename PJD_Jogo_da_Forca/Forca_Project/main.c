@@ -48,11 +48,19 @@ int main()
         if(gotOne == false)
         {
             tentativas--;
-        }
+                    }
         exibir_forca(tentativas);
         //Se for vitoria
-
+        if(strcmp(resposta, palavra) == 0)
+        {
+            SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+            printf("\n\nParabens! Voce venceu!\n");
+            vitoria++;
+            victor(vitoria, derrota);
+            break;
+        }
         //Se for derrota
+
         if(tentativas == 0)
         {
             SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
