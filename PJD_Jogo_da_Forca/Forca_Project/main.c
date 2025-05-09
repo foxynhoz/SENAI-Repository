@@ -5,8 +5,6 @@
 #include <windows.h>
 #include "functions.h"
 
-void eraseWord(char toErase);
-
 int main()
 {
     menu();

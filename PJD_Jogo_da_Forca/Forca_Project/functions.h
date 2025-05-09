@@ -19,9 +19,6 @@ void DefeatText()
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY );
 }
 
-
-
-
 //Funçao WILL - Conquistas VITORIAS
 void funcao(int jogador)
 {
