@@ -2,12 +2,11 @@
 #include <windows.h>
 
 //Funçoes BASE
-//VITORIA
-extern void game();
 void tryAgainMenu();
+void clsTA();
+//VITORIA
 char* randomWord();
 void diffMenu();
-void clsTA();
 int difficulty = 0;
 
 void VictoryText()
@@ -412,98 +411,4 @@ void diffMenu()
     }
 }
 
-/* Achando uma forma de fazer voltar na main
-void tryAgainMenu()
-{
-    int cursorPos = 1;
 
-    printf("\nTENTAR NOVAMENTE??\n\n");
-
-    printf(">>SIM\n");
-    printf("NAO\n");
-
-    while(1)
-    {
-        int choice;
-        choice = getch();
-
-        if(choice == 13 || choice == 32)
-        {
-            if(cursorPos == 1)
-            {
-                system("cls");
-                difficulty = 0;
-            }
-            if(cursorPos == 2)
-            {
-                system("cls");
-
-            }
-        }
-        if(choice == 115)
-        {
-            if(cursorPos == 1)
-            {
-                clsTA();
-                cursorPos = 2;
-
-                printf("\nTENTAR NOVAMENTE??\n\n");
-
-                printf("SIM\n");
-                printf(">>NAO\n");
-                continue;
-            }
-             if(cursorPos == 2)
-            {
-                clsTA();
-                cursorPos = 1;
-
-                printf("\nTENTAR NOVAMENTE??\n\n");
-
-                printf(">>SIM\n");
-                printf("NAO\n");
-                continue;
-            }
-        }
-        if(choice == 119)
-        {
-            if(cursorPos == 1)
-            {
-                clsTA();
-                cursorPos = 2;
-
-                printf("\nTENTAR NOVAMENTE??\n\n");
-
-                printf("SIM\n");
-                printf(">>NAO\n");
-                continue;
-            }
-             if(cursorPos == 2)
-            {
-                clsTA();
-                cursorPos = 1;
-
-                printf("\nTENTAR NOVAMENTE??\n\n");
-
-                printf(">>SIM\n");
-                printf("NAO\n");
-                continue;
-            }
-        }
-    }
-}
-
-void clsTA()
-{
-*/
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-}

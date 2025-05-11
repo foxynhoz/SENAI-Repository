@@ -6,12 +6,14 @@
 #include <time.h>
 #include "functions.h"
 
+void tryAgainMenu();
+void clsTA();
 int vitoria = 0, derrota = 0;
+
 
 int main()
 {
         menu();
-
         while (1)
         {
             srand(time(NULL));
@@ -82,15 +84,106 @@ int main()
                     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY );
                     victor(vitoria, derrota);
                     tentativas = 6;
-                    printf("Reiniciando...");
-                    Sleep(3000);
-                    system("cls");
-                    main();
-
+                    tryAgainMenu();
                     continue;
                 }
             }
         }
         getchar();
     return 0;
+}
+
+void tryAgainMenu()
+{
+    int cursorPos = 1;
+    printf("\nTENTAR NOVAMENTE??\n\n");
+
+    printf(">>SIM\n");
+    printf("NAO\n");
+
+    while(1)
+    {
+        int choice;
+        choice = getch();
+
+        if(choice == 13 || choice == 32)
+        {
+            if(cursorPos == 1)
+            {
+                system("cls");
+                main();
+
+            }
+            if(cursorPos == 2)
+            {
+                system("cls");
+                exit(0);
+            }
+        }
+        if(choice == 115)
+        {
+            if(cursorPos == 1)
+            {
+                clsTA();
+                cursorPos = 2;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf("SIM\n");
+                printf(">>NAO\n");
+                continue;
+            }
+             if(cursorPos == 2)
+            {
+                clsTA();
+                cursorPos = 1;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf(">>SIM\n");
+                printf("NAO\n");
+                continue;
+            }
+        }
+        if(choice == 119)
+        {
+            if(cursorPos == 1)
+            {
+                clsTA();
+                cursorPos = 2;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf("SIM\n");
+                printf(">>NAO\n");
+                continue;
+            }
+             if(cursorPos == 2)
+            {
+                clsTA();
+                cursorPos = 1;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf(">>SIM\n");
+                printf("NAO\n");
+                continue;
+            }
+        }
+    }
+}
+
+void clsTA()
+{
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
 }
