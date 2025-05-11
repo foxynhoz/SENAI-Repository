@@ -1,7 +1,15 @@
 #include <conio.h>
 #include <windows.h>
+
 //Funçoes BASE
 //VITORIA
+extern void game();
+void tryAgainMenu();
+char* randomWord();
+void diffMenu();
+void clsTA();
+int difficulty = 0;
+
 void VictoryText()
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -14,8 +22,9 @@ void DefeatText()
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED );
-    printf("\n\n\nGAME OVER.\n\n\n");
+    printf("\nGAME OVER.\n");
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY );
+    printf("\nA palavra era: ");
 }
 
 //Funçao WILL - Conquistas VITORIAS
@@ -106,7 +115,7 @@ void menu()
         {
             if(cursorPos == 1)
             {
-                system("cls");
+                diffMenu();
                 break;
             }
             if(cursorPos == 2)
@@ -230,4 +239,271 @@ void menu()
         }
 
     }
+}
+
+char* randomWord()
+{
+    if(difficulty == 1)
+    {
+        const char* facil[] = {"bola", "casa", "gato", "livro", "verde", "limão", "doce", "nuvem", "peixe", "risos"};
+
+        return facil[rand()%10];
+    }
+    if(difficulty == 2)
+    {
+        const char* medio[] = {"janela", "domingo", "caderno", "barulho", "viagem", "mistura", "trabalho", "brincar", "amarelo", "cartaz"};
+        return medio[rand()%10];
+    }
+    if(difficulty == 3)
+    {
+        const char* dificil[] = {"extraordinario", "inconstitucional", "responsabilidade", "inacreditável", "conhecimento", "revolucionario", "inteligência", "interessante", "desenterrando", "encantamento"};
+        return dificil[rand()%10];
+    }
+}
+
+void diffMenu()
+{
+    int cursorPos = 1;
+
+    system("cls");
+    printf("SELECIONE A DIFICULDADE\n\n");
+
+    printf(">>FACIL\n");
+    printf("MEDIO\n");
+    printf("DIFICL\n\n");
+
+    printf("VOLTAR\n\n");
+
+
+
+    while(1)
+    {
+        int choice;
+        choice = getch();
+
+        if(choice == 13 || choice == 32)
+        {
+            if(cursorPos == 1)
+            {
+                system("cls");
+                difficulty = 1;
+                break;
+            }
+            if(cursorPos == 2)
+            {
+                system("cls");
+                difficulty = 2;
+                break;
+            }
+            if(cursorPos == 3)
+            {
+                system("cls");
+                difficulty = 3;
+                break;
+            }
+            if(cursorPos == 4)
+            {
+                system("cls");
+                menu();
+            }
+        }
+        if(choice == 115)
+        {
+            if(cursorPos == 1){
+                system("cls");
+                cursorPos = 2;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf(">>MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 2){
+                system("cls");
+                cursorPos = 3;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf("MEDIO\n");
+                printf(">>DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 3){
+                system("cls");
+                cursorPos = 4;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf("MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf(">>VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 4){
+                system("cls");
+                cursorPos = 1;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf(">>FACIL\n");
+                printf("MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+        }
+        if(choice == 119)
+        {
+            if(cursorPos == 1){
+                system("cls");
+                cursorPos = 4;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf("MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf(">>VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 2){
+                system("cls");
+                cursorPos = 1;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf(">>FACIL\n");
+                printf("MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 3){
+                system("cls");
+                cursorPos = 2;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf(">>MEDIO\n");
+                printf("DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+            if(cursorPos == 4){
+                system("cls");
+                cursorPos = 3;
+                printf("SELECIONE A DIFICULDADE\n\n");
+
+                printf("FACIL\n");
+                printf("MEDIO\n");
+                printf(">>DIFICIL\n\n");
+
+                printf("VOLTAR\n\n");
+                continue;
+            }
+        }
+    }
+}
+
+/* Achando uma forma de fazer voltar na main
+void tryAgainMenu()
+{
+    int cursorPos = 1;
+
+    printf("\nTENTAR NOVAMENTE??\n\n");
+
+    printf(">>SIM\n");
+    printf("NAO\n");
+
+    while(1)
+    {
+        int choice;
+        choice = getch();
+
+        if(choice == 13 || choice == 32)
+        {
+            if(cursorPos == 1)
+            {
+                system("cls");
+                difficulty = 0;
+            }
+            if(cursorPos == 2)
+            {
+                system("cls");
+
+            }
+        }
+        if(choice == 115)
+        {
+            if(cursorPos == 1)
+            {
+                clsTA();
+                cursorPos = 2;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf("SIM\n");
+                printf(">>NAO\n");
+                continue;
+            }
+             if(cursorPos == 2)
+            {
+                clsTA();
+                cursorPos = 1;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf(">>SIM\n");
+                printf("NAO\n");
+                continue;
+            }
+        }
+        if(choice == 119)
+        {
+            if(cursorPos == 1)
+            {
+                clsTA();
+                cursorPos = 2;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf("SIM\n");
+                printf(">>NAO\n");
+                continue;
+            }
+             if(cursorPos == 2)
+            {
+                clsTA();
+                cursorPos = 1;
+
+                printf("\nTENTAR NOVAMENTE??\n\n");
+
+                printf(">>SIM\n");
+                printf("NAO\n");
+                continue;
+            }
+        }
+    }
+}
+
+void clsTA()
+{
+*/
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
+    printf("\033[F");
+    printf("\033[2K");
 }
