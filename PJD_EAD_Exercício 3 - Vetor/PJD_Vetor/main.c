@@ -3,7 +3,7 @@
 
 int main()
 {
-   int numero;
+   int numero = 0;
    int digitos[5] = {0};
 
    printf("Digite um numero ae entre 0 e 99999: ");
