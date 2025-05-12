@@ -21,7 +21,7 @@ int main()
 
             //Listas de palavras
             const char* palavra = randomWord();
-            //Resposta ter· como quantidade de indices, a mesma quantidade de letras da palavra armazenada em palavra
+            //Resposta ter√° como quantidade de indices, a mesma quantidade de letras da palavra armazenada em palavra
             char resposta[strlen(palavra)];
             char usrPalpite;
             int tentativas = 6;
@@ -30,7 +30,7 @@ int main()
             {
                 resposta[i] = '_';
             }
-            //isso determina que o ultimo index receber· \0 como caractere para simbolizar o fim da string
+            //isso determina que o ultimo index receber√° \0 como caractere para simbolizar o fim da string
             resposta[strlen(palavra)] = '\0';
 
             HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -57,7 +57,7 @@ int main()
 
                 system("cls");
 
-                //Se ele n„o acertar nenhuma
+                //Se ele n√£o acertar nenhuma
                 if(gotOne == false)
                 {
                     tentativas--;
@@ -70,7 +70,7 @@ int main()
                     VictoryText();
                     victor(vitoria, derrota);
                     tentativas = 6;
-
+                        main();
                     continue;
                 }
 
