@@ -244,7 +244,7 @@ char* randomWord()
 {
     if(difficulty == 1)
     {
-        const char* facil[] = {"bola", "casa", "gato", "livro", "verde", "limão", "doce", "nuvem", "peixe", "risos"};
+        const char* facil[] = {"bola", "casa", "gato", "livro", "verde", "limao", "doce", "nuvem", "peixe", "risos"};
 
         return facil[rand()%10];
     }
@@ -255,7 +255,7 @@ char* randomWord()
     }
     if(difficulty == 3)
     {
-        const char* dificil[] = {"extraordinario", "inconstitucional", "responsabilidade", "inacreditável", "conhecimento", "revolucionario", "inteligência", "interessante", "desenterrando", "encantamento"};
+        const char* dificil[] = {"extraordinario", "inconstitucional", "responsabilidade", "inacreditavel", "conhecimento", "revolucionario", "inteligencia", "interessante", "desenterrando", "encantamento"};
         return dificil[rand()%10];
     }
 }
@@ -270,8 +270,6 @@ void diffMenu()
     printf(">>FACIL\n");
     printf("MEDIO\n");
     printf("DIFICL\n\n");
-
-    printf("VOLTAR\n\n");
 
 
 
@@ -300,11 +298,6 @@ void diffMenu()
                 difficulty = 3;
                 break;
             }
-            if(cursorPos == 4)
-            {
-                system("cls");
-                menu();
-            }
         }
         if(choice == 115)
         {
@@ -317,7 +310,6 @@ void diffMenu()
                 printf(">>MEDIO\n");
                 printf("DIFICIL\n\n");
 
-                printf("VOLTAR\n\n");
                 continue;
             }
             if(cursorPos == 2){
@@ -329,22 +321,9 @@ void diffMenu()
                 printf("MEDIO\n");
                 printf(">>DIFICIL\n\n");
 
-                printf("VOLTAR\n\n");
                 continue;
             }
             if(cursorPos == 3){
-                system("cls");
-                cursorPos = 4;
-                printf("SELECIONE A DIFICULDADE\n\n");
-
-                printf("FACIL\n");
-                printf("MEDIO\n");
-                printf("DIFICIL\n\n");
-
-                printf(">>VOLTAR\n\n");
-                continue;
-            }
-            if(cursorPos == 4){
                 system("cls");
                 cursorPos = 1;
                 printf("SELECIONE A DIFICULDADE\n\n");
@@ -353,22 +332,21 @@ void diffMenu()
                 printf("MEDIO\n");
                 printf("DIFICIL\n\n");
 
-                printf("VOLTAR\n\n");
                 continue;
             }
+
         }
         if(choice == 119)
         {
             if(cursorPos == 1){
                 system("cls");
-                cursorPos = 4;
+                cursorPos = 3;
                 printf("SELECIONE A DIFICULDADE\n\n");
 
                 printf("FACIL\n");
                 printf("MEDIO\n");
-                printf("DIFICIL\n\n");
+                printf(">>DIFICIL\n\n");
 
-                printf(">>VOLTAR\n\n");
                 continue;
             }
             if(cursorPos == 2){
@@ -380,7 +358,6 @@ void diffMenu()
                 printf("MEDIO\n");
                 printf("DIFICIL\n\n");
 
-                printf("VOLTAR\n\n");
                 continue;
             }
             if(cursorPos == 3){
@@ -392,21 +369,9 @@ void diffMenu()
                 printf(">>MEDIO\n");
                 printf("DIFICIL\n\n");
 
-                printf("VOLTAR\n\n");
                 continue;
             }
-            if(cursorPos == 4){
-                system("cls");
-                cursorPos = 3;
-                printf("SELECIONE A DIFICULDADE\n\n");
 
-                printf("FACIL\n");
-                printf("MEDIO\n");
-                printf(">>DIFICIL\n\n");
-
-                printf("VOLTAR\n\n");
-                continue;
-            }
         }
     }
 }

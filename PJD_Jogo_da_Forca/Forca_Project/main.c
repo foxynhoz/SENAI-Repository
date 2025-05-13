@@ -70,7 +70,7 @@ int main()
                     VictoryText();
                     victor(vitoria, derrota);
                     tentativas = 6;
-                        main();
+                    tryAgainMenu();
                     continue;
                 }
 

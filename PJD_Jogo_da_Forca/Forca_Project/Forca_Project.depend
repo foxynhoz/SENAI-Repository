@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1746998304 source:c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\main.c
+1747145240 source:c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -33,7 +33,30 @@
 	<stdbool.h>
 	<windows.h>
 
-1746998276 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\functions.h
+1747146597 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\functions.h
 	<conio.h>
 	<windows.h>
+
+1747145240 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\/\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<windows.h>
+	<time.h>
+	"functions.h"
+
+1747145752 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\\\functions.h
+	<conio.h>
+	<windows.h>
+	"/main.c"
+
+1747145240 c:\users\foxyz\documents\jogo forca\pjd_jogo_da_forca\forca_project\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<windows.h>
+	<time.h>
+	"functions.h"
 
