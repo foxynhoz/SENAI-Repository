@@ -10,7 +10,6 @@ void tryAgainMenu();
 void clsTA();
 int vitoria = 0, derrota = 0;
 
-
 int main()
 {
         menu();
@@ -175,15 +174,9 @@ void tryAgainMenu()
 
 void clsTA()
 {
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
-    printf("\033[F");
-    printf("\033[2K");
+    for(int i = 0; i < 5; i++)
+    {
+        printf("\033[F");
+        printf("\033[2K");
+    }
 }

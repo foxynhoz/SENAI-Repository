@@ -242,19 +242,16 @@ void menu()
 
 char* randomWord()
 {
-    if(difficulty == 1)
-    {
+    if(difficulty == 1){
         const char* facil[] = {"bola", "casa", "gato", "livro", "verde", "limao", "doce", "nuvem", "peixe", "risos"};
 
         return facil[rand()%10];
     }
-    if(difficulty == 2)
-    {
+    if(difficulty == 2){
         const char* medio[] = {"janela", "domingo", "caderno", "barulho", "viagem", "mistura", "trabalho", "brincar", "amarelo", "cartaz"};
         return medio[rand()%10];
     }
-    if(difficulty == 3)
-    {
+    if(difficulty == 3){
         const char* dificil[] = {"extraordinario", "inconstitucional", "responsabilidade", "inacreditavel", "conhecimento", "revolucionario", "inteligencia", "interessante", "desenterrando", "encantamento"};
         return dificil[rand()%10];
     }
@@ -271,8 +268,6 @@ void diffMenu()
     printf("MEDIO\n");
     printf("DIFICL\n\n");
 
-
-
     while(1)
     {
         int choice;
@@ -280,20 +275,17 @@ void diffMenu()
 
         if(choice == 13 || choice == 32)
         {
-            if(cursorPos == 1)
-            {
+            if(cursorPos == 1){
                 system("cls");
                 difficulty = 1;
                 break;
             }
-            if(cursorPos == 2)
-            {
+            if(cursorPos == 2){
                 system("cls");
                 difficulty = 2;
                 break;
             }
-            if(cursorPos == 3)
-            {
+            if(cursorPos == 3){
                 system("cls");
                 difficulty = 3;
                 break;
@@ -334,7 +326,6 @@ void diffMenu()
 
                 continue;
             }
-
         }
         if(choice == 119)
         {
@@ -371,9 +362,6 @@ void diffMenu()
 
                 continue;
             }
-
         }
     }
 }
-
-
