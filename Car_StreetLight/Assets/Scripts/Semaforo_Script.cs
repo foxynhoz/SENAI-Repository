@@ -22,9 +22,9 @@ public class Semaforo_Script : MonoBehaviour
         {
             Lights.Add(child.gameObject);
         }
+        colorChange(actualState);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -42,11 +42,13 @@ public class Semaforo_Script : MonoBehaviour
         {
             timer = 0f;
             actualState = states.isRed;
+            colorChange(actualState);
         }
         if (timer >= 10f && actualState == states.isGreen)
         {
             timer = 0f;
             actualState = states.isYellow;
+            colorChange(actualState);
         }
     }
     void colorChange(states actualState)
@@ -54,7 +56,20 @@ public class Semaforo_Script : MonoBehaviour
         switch (actualState)
         {
             case states.isRed:
-                
+                Lights[0].GetComponent<SpriteRenderer>().color = Color.red;
+                Lights[1].GetComponent<SpriteRenderer>().color = Color.gray;
+                Lights[2].GetComponent<SpriteRenderer>().color = Color.gray;
+                break;
+            case states.isYellow:
+                Lights[0].GetComponent<SpriteRenderer>().color = Color.gray;
+                Lights[1].GetComponent<SpriteRenderer>().color = Color.yellow;
+                Lights[2].GetComponent<SpriteRenderer>().color = Color.gray;
+                break;
+            case states.isGreen:
+                Lights[0].GetComponent<SpriteRenderer>().color = Color.gray;
+                Lights[1].GetComponent<SpriteRenderer>().color = Color.gray;
+                Lights[2].GetComponent<SpriteRenderer>().color = Color.green;
+
                 break;
         }
 
