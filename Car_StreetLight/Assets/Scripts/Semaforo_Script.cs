@@ -5,14 +5,14 @@ using static Unity.VisualScripting.Metadata;
 
 public class Semaforo_Script : MonoBehaviour
 {
-    
+
     public enum states
     {
         isRed,
         isYellow,
         isGreen,
     }
-    public states actualState = states.isRed;
+    public states actualState;
     float timer = 0f;
     public List<GameObject> Lights = new List<GameObject>();
 
@@ -32,7 +32,7 @@ public class Semaforo_Script : MonoBehaviour
     }
     public void changeState() //Usando IF ao invez de SWITCH, por conta de ter que checar o tempo junto do estado
     {
-        if (timer >= 5f && actualState == states.isRed)
+        if (timer >= 8f && actualState == states.isRed)
         {
             timer = 0f;
             actualState = states.isGreen;
@@ -44,7 +44,7 @@ public class Semaforo_Script : MonoBehaviour
             actualState = states.isRed;
             colorChange(actualState);
         }
-        if (timer >= 10f && actualState == states.isGreen)
+        if (timer >= 5f && actualState == states.isGreen)
         {
             timer = 0f;
             actualState = states.isYellow;
