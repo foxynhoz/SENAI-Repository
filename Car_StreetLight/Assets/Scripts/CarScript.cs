@@ -47,6 +47,10 @@ public class CarScript : MonoBehaviour
         {
             ActualState = Carstates.isStopped;
         }
+        if (collision.collider.name == "CarKiller")
+        {
+            Destroy(gameObject);
+        }
     }
     
     private void OnCollisionExit2D(Collision2D collision)
