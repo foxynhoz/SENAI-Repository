@@ -16,13 +16,13 @@ public class Semaforo_Script : MonoBehaviour
     float timer = 0f;
     public List<GameObject> Lights = new List<GameObject>();
 
-    void Start()//Antes era só um Serialize Field onde eu arrastava as lampadas, falei "Nah, tem q ter um jeito automatico de fazer isso" e aqui está
+    void Start()//Antes era só um Serialize Field onde eu arrastava as lampadas, falei "Nah, tem q ter um jeito automatico de fazer isso" e essa foi a melhor forma eu acho
     {
         foreach (Transform child in transform) 
         {
             Lights.Add(child.gameObject);
         }
-        colorChange(SemaforoActualState);
+        colorChange(SemaforoActualState); //So serve pa mudar as cores do semaforo visualmente dependendo do estado
     }
 
     void Update()
