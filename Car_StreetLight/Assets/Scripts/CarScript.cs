@@ -1,20 +1,61 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    float speed = 3f;
+    public enum Carstates
     {
-
+        isMoving,isStopped
     }
+    public Carstates ActualState = Carstates.isMoving;
 
     void Update()
     {
-
+        switch(ActualState)
+        {
+            case Carstates.isMoving:
+                Move();
+                break;
+            case Carstates.isStopped:
+                break;
+        }
+        
     }
 
+    void Move()
+    {
+        transform.Translate(Vector3.up * speed * Time.deltaTime);
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log("Semas");
+        Semaforo_Script sem = collision.collider.GetComponent<Semaforo_Script>();
+
+        if (collision.collider.tag == "Semaforo" && sem.SemaforoActualState == Semaforo_Script.states.isRed)
+        {
+            ActualState = Carstates.isStopped;
+        }
+        if (collision.collider.tag == "Semaforo" && sem.SemaforoActualState == Semaforo_Script.states.isGreen)
+        {
+            ActualState = Carstates.isMoving;
+        }
     }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Car")
+        {
+            ActualState = Carstates.isStopped;
+        }
+    }
+    
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Car")
+        {
+            ActualState = Carstates.isMoving;
+        }
+    }
+    
 }
+

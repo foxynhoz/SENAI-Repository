@@ -12,7 +12,7 @@ public class Semaforo_Script : MonoBehaviour
         isYellow,
         isGreen,
     }
-    public states actualState;
+    public states SemaforoActualState;
     float timer = 0f;
     public List<GameObject> Lights = new List<GameObject>();
 
@@ -22,7 +22,7 @@ public class Semaforo_Script : MonoBehaviour
         {
             Lights.Add(child.gameObject);
         }
-        colorChange(actualState);
+        colorChange(SemaforoActualState);
     }
 
     void Update()
@@ -32,23 +32,23 @@ public class Semaforo_Script : MonoBehaviour
     }
     public void changeState() //Usando IF ao invez de SWITCH, por conta de ter que checar o tempo junto do estado
     {
-        if (timer >= 8f && actualState == states.isRed)
+        if (timer >= 8f && SemaforoActualState == states.isRed)
         {
             timer = 0f;
-            actualState = states.isGreen;
-            colorChange(actualState);
+            SemaforoActualState = states.isGreen;
+            colorChange(SemaforoActualState);
         }
-        if (timer >= 3f && actualState == states.isYellow)
+        if (timer >= 3f && SemaforoActualState == states.isYellow)
         {
             timer = 0f;
-            actualState = states.isRed;
-            colorChange(actualState);
+            SemaforoActualState = states.isRed;
+            colorChange(SemaforoActualState);
         }
-        if (timer >= 5f && actualState == states.isGreen)
+        if (timer >= 5f && SemaforoActualState == states.isGreen)
         {
             timer = 0f;
-            actualState = states.isYellow;
-            colorChange(actualState);
+            SemaforoActualState = states.isYellow;
+            colorChange(SemaforoActualState);
         }
     }
     void colorChange(states actualState)

@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cc6ceb59d191b49b73478a2f1c0b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Semaforo_Script
-  actualState: 0
+  SemaforoActualState: 0
   Lights: []
 --- !u!61 &2821202206230530919
 BoxCollider2D:

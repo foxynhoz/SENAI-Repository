@@ -10,7 +10,7 @@ public class Semaforos_Manager : MonoBehaviour
 
     void Start()
     {
-        //Sem2ActualState.actualState = Semaforo_Script.states.isGreen;
+        //Sem2ActualState.SemaforoActualState = Semaforo_Script.states.isGreen;
     }
 
     void Update()
