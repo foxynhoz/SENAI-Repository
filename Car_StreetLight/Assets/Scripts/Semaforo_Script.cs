@@ -32,7 +32,7 @@ public class Semaforo_Script : MonoBehaviour
     }
     public void changeState() //Usando IF ao invez de SWITCH, por conta de ter que checar o tempo junto do estado
     {
-        if (timer >= 8f && SemaforoActualState == states.isRed)
+        if (timer >= 9f && SemaforoActualState == states.isRed)
         {
             timer = 0f;
             SemaforoActualState = states.isGreen;
