@@ -1,0 +1,14 @@
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\bin\Debug\net8.0\AStrela.exe
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\bin\Debug\net8.0\AStrela.deps.json
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\bin\Debug\net8.0\AStrela.runtimeconfig.json
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\bin\Debug\net8.0\AStrela.dll
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\bin\Debug\net8.0\AStrela.pdb
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.AssemblyInfoInputs.cache
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.AssemblyInfo.cs
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.csproj.CoreCompileInputs.cache
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.dll
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\refint\AStrela.dll
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.pdb
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\AStrela.genruntimeconfig.cache
+C:\Users\Foxyz\Downloads\SENAI-main\SENAI-main\AsetarM\AStrela\AStrela\obj\Debug\net8.0\ref\AStrela.dll
