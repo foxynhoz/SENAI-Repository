@@ -7,7 +7,6 @@ public class Enemy : Entities
     {
         Idle,
         Chase,
-        Dead
     }
 
     public EnemyState currentState;
@@ -25,16 +24,18 @@ public class Enemy : Entities
                 Chase();
                 break;
 
-            case EnemyState.Dead:
-                break;
         }
     }
 
     void Idle()
     {
-        if (Vector3.Distance(transform.position, player.position) < 2f)
+        if (Vector3.Distance(transform.position, player.position) < 8f)
         {
             currentState = EnemyState.Chase;
+        }
+        else
+        {
+            currentState = EnemyState.Idle;
         }
     }
 
