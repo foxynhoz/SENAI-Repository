@@ -13,4 +13,13 @@ public class GameSave : MonoBehaviour
     {
         
     }
+    public void SaveGame()
+    {
+        //float x = player.transform.position.x;
+        //float y = player.transform.position.y;
+
+        // Update no banco:
+        //string query = $"UPDATE PlayerData SET posX = {x}, posY = {y}, health = {player.health} WHERE id = 1";
+    }
+
 }
